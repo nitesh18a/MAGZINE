@@ -1,4 +1,5 @@
 
+
 $('.slider-for').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
@@ -40,4 +41,44 @@ var num;
  // for nav mid nave part starts
 
  //nav part ends
+
+ //article submisiion form js starts
+    function getFileName() {
+        var x = document.getElementById('entry_value')
+        document.getElementById('fileName').innerHTML = x.value.split('\\').pop()
+    }
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+
+  // form checkbox and submit validation
+  
+  
+  var checker = document.getElementById('invalidCheck2');
+var sendbtn = document.getElementById('submitbtn');
+sendbtn.disabled = true;
+checker.onchange = function() {
+  sendbtn.disabled = !this.checked;
+};
+  // form checkbox and submit validation
+
+ //article submission form starts
+
 
